@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("/images/projects_bg1.png");
+    background-color: rgba(31,38,65,255);
+    color: white;
+}
+
+div.container-fluid > div.row{
+    width: 100%;
+    margin: 0;
+}
+
+div.landing_page_content > div > div > h1{
+    font-size: 5.5rem;
+}
+
+div.landing_page_content > div > p{
+    font-size: 1.5rem;
+}
+
+div.landing_page_content > p{
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+    div.landing_page_content > div > h1{
+        font-size: 5rem;
+    }
+    
+    div.landing_page_content > div > p{
+        font-size: 1.3rem;
+    }
+    
+    div.landing_page_content > p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    div.landing_page_content > div{
+        flex-direction: column;
+    }
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: rgb(255, 165, 0);
+    inherits: false;
+}
+  
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: rgb(255, 60, 0);
+    inherits: false;
+}
+
+a.btn-orange{
+    color: white;
+    background: linear-gradient(90deg,var(--myColor1), var(--myColor2));
+    border: transparent;
+    font-size: 1.2rem;
+    -webkit-box-shadow: 0 0 10px rgb(255, 165, 0);
+    box-shadow: 0 0 10px rgb(255, 165, 0);
+    transition: box-shadow .4s,-webkit-box-shadow .4s;
+    transition: --myColor1 3s, --myColor2 1.5s;
+}
+
+a.btn-orange:hover{
+    color: white;
+    --myColor2: rgb(255, 165, 0);
+}
+
+div.landing_page_content > a > span{
+    font-weight: 500;
+}
+
+div.projects > div > a{
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+@media (min-width: 992px){
+    div.projects > div:first-of-type > a{
+        margin-left: auto;
+    }
+    
+    /* If second row of projects! */
+    div.projects > div:nth-of-type(4) > a{
+        margin-left: auto;
+    }
+
+    div.projects > img{
+        height: 100%;
+    }
+}
+
+@media (max-width: 992px){
+    div.projects > div > a{
+        margin: auto;
+    }
+    div.projects > img{
+        transform: rotate(90deg);
+    }
+}
+
+div.projects > div > a > div > img{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+div.projects > div > a:hover > div >img{
+    top: -10px;
+}
+
+div.projects > div > a > p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 0;
+    color: white;
+}
