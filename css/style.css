@@ -43,6 +43,14 @@ div.landing_page_content > p{
     }
 }
 
+div.socials > div > a > img{
+    width: 50px;
+}
+
+div.socials > div > a{
+    margin: 0 10px;
+}
+
 @property --myColor1 {
     syntax: '<color>';
     initial-value: rgb(255, 165, 0);
@@ -55,7 +63,7 @@ div.landing_page_content > p{
     inherits: false;
 }
 
-a.btn-orange{
+.btn-orange{
     color: white;
     background: linear-gradient(90deg,var(--myColor1), var(--myColor2));
     border: transparent;
@@ -66,7 +74,7 @@ a.btn-orange{
     transition: --myColor1 3s, --myColor2 1.5s;
 }
 
-a.btn-orange:hover{
+.btn-orange:hover{
     color: white;
     --myColor2: rgb(255, 165, 0);
 }
@@ -75,7 +83,58 @@ div.landing_page_content > a > span{
     font-weight: 500;
 }
 
+/* Latest news */
+
+div.latest_news > div{
+    text-align: center;
+}
+
+div.latest_news > div > a{
+    cursor: default;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+}
+
+div.latest_news > div.header > h1, div.projects > div.header > h1{
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+div.latest_news > div > a > div.article_content > b.date{
+    border-right: 1px solid;
+}
+
+div.latest_news > div > a > div > img{
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+div.latest_news > div > a > div > img:hover{
+    top: -10px;
+}
+
+/* Mailchimp */
+
+div.subscribe{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    -webkit-box-shadow: 0 0 20px rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* Projects */
+div.projects > div{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 div.projects > div > a{
+    cursor: default;
+    color: white;
     text-decoration: none;
     width: fit-content;
 }
@@ -100,25 +159,31 @@ div.projects > div > a{
     div.projects > div > a{
         margin: auto;
     }
-    div.projects > img{
-        transform: rotate(90deg);
-    }
 }
 
 div.projects > div > a > div > img{
+    cursor: pointer;
     position: relative;
     top: 0;
     transition: top ease 0.5s;
 }
 
-div.projects > div > a:hover > div >img{
+div.projects > div > a > div > img:hover{
     top: -10px;
 }
 
-div.projects > div > a > p{
-    text-align: center;
+div.projects > div > a > div.project_content > p.title{
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 20px 0;
-    color: white;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+div.projects > div > a > div.project_content > p.status{
+    opacity: 0.75;
+}
+
+div.projects > div > a > div.project_content > p.description{
+    width: 75%;
+    margin: auto;
 }
