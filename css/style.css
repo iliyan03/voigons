@@ -37,7 +37,7 @@ nav > ul {
 
 .responsiveToggler > .nav-list > .nav-buttons{
     display: none;
-    transition: display 0.2s ease;
+    z-index: 10;
 }
 
 .responsiveToggler > .nav-list > .nav-buttons > li > a{
@@ -96,5 +96,33 @@ nav > .responsiveToggler > i{
     .responsiveToggler > div > .nav-buttons{
         flex-direction: column;
         text-align: right;
+    }
+}
+
+.landing_page{
+    position: relative;
+}
+
+.landing_page > img{
+    width: 100%;
+    height: 90vh;
+}
+
+.landing_page > div{
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+
+.landing_page > div > b{
+    font-size: 6rem;
+    color: white;
+    line-height: 6.5rem;
+}
+
+@media (max-width: 768px){
+    .landing_page > div > b{
+        font-size: 3rem;
+        line-height: 3rem;
     }
 }
