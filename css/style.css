@@ -209,6 +209,7 @@ nav > .responsiveToggler > i{
 
 .project-content > button{
     width: 25%;
+    font-size: 20px;
 }
 
 @media (max-width: 768px) { 
@@ -221,6 +222,8 @@ nav > .responsiveToggler > i{
     }
     .project-content > button{
         margin: auto;
+        width: 75% !important;
+        font-size: 18px;
     }
     .project-content{
         margin-top: 20px;
@@ -273,6 +276,9 @@ footer .hq, footer .support{
         margin: 10px auto;
     }
     footer > div.container > div:nth-child(2){
-        justify-content: space-between;
+        flex-direction: column;
+    }
+    footer .support{
+        margin-top: 20px;
     }
 }
