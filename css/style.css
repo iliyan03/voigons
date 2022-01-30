@@ -1,189 +1,100 @@
 body{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: url("https://iliyan03.github.io/voigons/images/projects_bg1.png"), url("https://iliyan03.github.io/voigons/images/projects_bg1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(31,38,65,255);
+}
+
+nav{
+    background-color: black;
     color: white;
+    text-transform: uppercase;
+    display: flex;
 }
 
-div.container-fluid > div.row{
-    width: 100%;
-    margin: 0;
+nav > div{
+    top: 0.75rem;
+    left: 1rem;
 }
 
-div.landing_page_content > div > div > h1{
-    font-size: 5.5rem;
+nav > div > img{
+    width: 50px;
+    height: 50px;
 }
 
-div.landing_page_content > div > p{
+nav > div > span{
+    font-weight: 350;
+    font-size: 2rem;
+}
+
+nav > ul {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.responsiveToggler{
+    display: none;
+}
+
+.responsiveToggler > .nav-list > .nav-buttons{
+    display: none;
+    transition: display 0.2s ease;
+}
+
+.responsiveToggler > .nav-list > .nav-buttons > li > a{
+    font-size: 16px;
+}
+
+.nav-buttons > li{
+    list-style-type: none;
+}
+
+.nav-buttons > li > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav > .responsiveToggler > i{
     font-size: 1.5rem;
+    cursor: pointer;
+    text-align: right;
 }
 
-div.landing_page_content > p{
-    font-size: 1.2rem;
+.responsiveToggler > div > .nav-buttons{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1100px){
+    nav > ul {
+        width: 75%;
+        margin: 0;
+        margin-left: auto !important;
+    }
+    nav > ul > li > a {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px){
-    div.landing_page_content > div > h1{
-        font-size: 5rem;
+    nav > ul{
+        display: none;
     }
-    
-    div.landing_page_content > div > p{
-        font-size: 1.3rem;
+    nav{
+        justify-content: end;
     }
-    
-    div.landing_page_content > p{
-        font-size: 1rem;
-        text-align: center;
+    .responsiveToggler{
+        display: flex;
     }
-    div.landing_page_content > div{
+    .nav-buttons.active{
+        display: flex !important;
+    }
+}
+
+@media (max-width: 500px){
+    .responsiveToggler > div > .nav-buttons{
         flex-direction: column;
+        text-align: right;
     }
-}
-
-div.socials > div > a > img{
-    width: 50px;
-}
-
-div.socials > div > a{
-    margin: 0 10px;
-}
-
-@property --myColor1 {
-    syntax: '<color>';
-    initial-value: rgb(255, 165, 0);
-    inherits: false;
-}
-  
-@property --myColor2 {
-    syntax: '<color>';
-    initial-value: rgb(255, 60, 0);
-    inherits: false;
-}
-
-.btn-orange{
-    color: white;
-    background: linear-gradient(90deg,var(--myColor1), var(--myColor2));
-    border: transparent;
-    font-size: 1.2rem;
-    -webkit-box-shadow: 0 0 10px rgb(255, 165, 0);
-    box-shadow: 0 0 10px rgb(255, 165, 0);
-    transition: box-shadow .4s,-webkit-box-shadow .4s;
-    transition: --myColor1 3s, --myColor2 1.5s;
-}
-
-.btn-orange:hover{
-    color: white;
-    --myColor2: rgb(255, 165, 0);
-}
-
-div.landing_page_content > a > span{
-    font-weight: 500;
-}
-
-/* Latest news */
-
-div.latest_news > div{
-    text-align: center;
-}
-
-div.latest_news > div > a{
-    cursor: default;
-    color: white;
-    text-decoration: none;
-    width: fit-content;
-    display: block;
-}
-
-div.latest_news > div.header > h1, div.projects > div.header > h1{
-    font-size: 4rem;
-    margin-bottom: 30px;
-}
-
-div.latest_news > div > a > div.article_content > b.date{
-    border-right: 1px solid;
-}
-
-div.latest_news > div > a > div > img{
-    cursor: pointer;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s;
-}
-
-div.latest_news > div > a > div > img:hover{
-    top: -10px;
-}
-
-/* Mailchimp */
-
-div.subscribe{
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    -webkit-box-shadow: 0 0 20px rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgb(255, 255, 255);
-}
-
-/* Projects */
-div.projects > div{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-div.projects > div > a{
-    cursor: default;
-    color: white;
-    text-decoration: none;
-    width: fit-content;
-}
-
-
-@media (min-width: 992px){
-    div.projects > div:first-of-type > a{
-        margin-left: auto;
-    }
-    
-    /* If second row of projects! */
-    div.projects > div:nth-of-type(4) > a{
-        margin-left: auto;
-    }
-
-    div.projects > img{
-        height: 100%;
-    }
-}
-
-@media (max-width: 992px){
-    div.projects > div > a{
-        margin: auto;
-    }
-}
-
-div.projects > div > a > div > img{
-    cursor: pointer;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s;
-}
-
-div.projects > div > a > div > img:hover{
-    top: -10px;
-}
-
-div.projects > div > a > div.project_content > p.title{
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding-top: 20px;
-    margin-bottom: 0;
-}
-
-div.projects > div > a > div.project_content > p.status{
-    opacity: 0.75;
-}
-
-div.projects > div > a > div.project_content > p.description{
-    width: 75%;
-    margin: auto;
 }
