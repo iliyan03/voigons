@@ -94,8 +94,11 @@ nav > .responsiveToggler > i{
 
 @media (max-width: 500px){
     .responsiveToggler > div > .nav-buttons{
-        flex-direction: column;
-        text-align: right;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .responsiveToggler > div > .nav-buttons > li{
+        margin: 5px;
     }
 }
 
@@ -277,6 +280,7 @@ footer .hq, footer .support{
     }
     footer > div.container > div:nth-child(2){
         flex-direction: column;
+        text-align: center;
     }
     footer .support{
         margin-top: 20px;
