@@ -125,4 +125,154 @@ nav > .responsiveToggler > i{
         font-size: 3rem;
         line-height: 3rem;
     }
+    .form_inputs{
+        flex-direction: column;
+    }
+    .form_inputs > input.button{
+        margin: auto;
+        margin-top: 20px;
+        width: 50%;
+    }
+}
+
+.newsletter > b{
+    font-size: 1.7rem;
+}
+
+.form_inputs > input.email{
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 500;
+    border-color: black;
+}
+
+.form_inputs > input.button{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+    background: black;
+    border-color: black;
+}
+
+.patreon{
+    background: black;
+    color: white;
+}
+
+.patreon-button{
+    border-radius: 20px;
+    border-color: transparent;
+    color: white;
+    background: #ff424d;
+    font-weight: 500;
+}
+
+.steam-button{
+    border-radius: 20px;
+    border-color: transparent;
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+.youtube-button{
+    border-radius: 20px;
+    border-color: transparent;
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+.project-content{
+    width: 100%;
+}
+
+.project-content  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-content .title > b{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.project-content .description > p{
+    font-size: 2rem;
+}
+
+.project-content > button > a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-content > button{
+    width: 25%;
+}
+
+@media (max-width: 768px) { 
+    .project{
+        flex-direction: column;
+        text-align: center;
+    }
+    .project > img{
+        margin: auto;
+    }
+    .project-content > button{
+        margin: auto;
+    }
+    .project-content{
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .project-content .title > b{
+        font-size: 1rem;
+    }
+
+    .project-content .description > p{
+        font-size: 1.5rem;
+    }
+
+    .project-content > button{
+        width: 50%;
+    }
+}
+
+footer{
+    color: white;
+    background-color: black;
+}
+
+footer .logo span{
+    font-weight: 350;
+    font-size: 2rem;
+}
+
+footer .socials{
+    background-color: #C4C4C4;
+    border-radius: 10px;
+}
+
+footer .socials > a{
+    margin: 0 15px;
+}
+
+footer .hq, footer .support{
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) { 
+    footer > div.container > div:first-of-type{
+        flex-direction: column;
+    }
+    footer .logo, footer .socials{
+        margin: 10px auto;
+    }
+    footer > div.container > div:nth-child(2){
+        justify-content: space-between;
+    }
 }
