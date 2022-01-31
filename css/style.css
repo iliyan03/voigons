@@ -103,7 +103,7 @@ nav > .responsiveToggler > i{
 }
 
 .landing_page{
-    background-image: url('/images/landing_page_image.png');
+    background-image: url('https://iliyan03.github.io/voigons/images/landing_page_image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
