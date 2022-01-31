@@ -202,7 +202,7 @@ nav > .responsiveToggler > i{
 }
 
 @media (max-width: 499px){
-    .project-content  .title > h1 > span{
+    .project-content  .title > b > span{
         display: block;
     }
 }
@@ -283,7 +283,6 @@ footer .socials > a > img{
         width: 35px;
     }
 }
-
 
 footer .support{
     margin: 0 40px;
