@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iliyan03.github.io/voigons/sitemap.xml
