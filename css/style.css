@@ -201,6 +201,12 @@ nav > .responsiveToggler > i{
     align-items: center;
 }
 
+@media (max-width: 499px){
+    .project-content  .title > h1 > span{
+        display: block;
+    }
+}
+
 .project-content .title > b{
     color: gray;
     font-size: 1.2rem;
@@ -280,7 +286,7 @@ footer .socials > a > img{
 
 
 footer .support{
-    margin: 0 20px;
+    margin: 0 40px;
 }
 
 @media (max-width: 768px) { 
