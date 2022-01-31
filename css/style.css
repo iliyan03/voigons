@@ -147,11 +147,18 @@ nav > .responsiveToggler > i{
     font-size: 1.7rem;
 }
 
-.form_inputs > input.email{
+.form_inputs > input.email, .form_inputs > input.name{
     font-size: 1.5rem;
     padding: 10px;
     font-weight: 500;
     border-color: black;
+}
+
+
+@media (max-width: 768px){
+    .form_inputs > input.email, .form_inputs > input.name{
+        margin: 10px 0;
+    }
 }
 
 .form_inputs > input.button{
