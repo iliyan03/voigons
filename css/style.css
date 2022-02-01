@@ -24,6 +24,12 @@ nav > div > span{
     font-size: 2rem;
 }
 
+nav > div > span > a,
+nav > div > span > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
 nav > ul {
     display: flex;
     width: 50%;
@@ -107,7 +113,7 @@ nav > .responsiveToggler > i{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 92.26vh;
 }
 
 @media (max-width: 768px){
@@ -141,10 +147,6 @@ nav > .responsiveToggler > i{
         margin-top: 20px;
         width: 50%;
     }
-}
-
-.newsletter > b{
-    font-size: 1.7rem;
 }
 
 .form_inputs > input.email, .form_inputs > input.name{
@@ -202,17 +204,12 @@ nav > .responsiveToggler > i{
     width: 100%;
 }
 
-.project-content  .title{
+/* .project-content  .title{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-@media (max-width: 499px){
-    .project-content  .title > b > span{
-        display: block;
-    }
-}
+ */
 
 .project-content .title > b{
     color: gray;
@@ -291,8 +288,22 @@ footer .socials > a > img{
     }
 }
 
+@media (max-width: 499px){
+    footer .socials {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer .socials > a{
+        margin: 15px;
+    }
+}
+
 footer .support{
     margin: 0 40px;
+}
+
+footer .support > a{
+    color: white;
 }
 
 @media (max-width: 768px) { 
