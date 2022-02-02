@@ -200,6 +200,10 @@ nav > .responsiveToggler > i{
     font-weight: 500;
 }
 
+.project > img{
+    border: 1px rgb(147, 147, 147) solid;
+}
+
 .project-content{
     width: 100%;
 }
