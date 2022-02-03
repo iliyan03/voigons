@@ -3,7 +3,6 @@ body{
 }
 
 nav{
-    background-color: rgb(0, 0, 0, 0.3);
     color: white;
     text-transform: uppercase;
     display: flex;
@@ -86,6 +85,10 @@ nav > .responsiveToggler > i{
     justify-content: space-between;
 }
 
+#responsiveButtons{
+    background-color: transparent;
+}
+
 @media (max-width: 1100px){
     nav > div:nth-of-type(2) > div.logo{
         display: none;
@@ -129,6 +132,7 @@ nav > .responsiveToggler > i{
 }
 
 .landing_page{
+    background: black;
     position: relative;
     height: 100vh;
 }
@@ -185,41 +189,86 @@ nav > .responsiveToggler > i{
     background-repeat: no-repeat;
 }
 
-/* Fading animation */
-.custom_fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-  
-@-webkit-keyframes custom_fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-  
-@keyframes custom_fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
 @media (max-width: 768px){
     .landing_page > .slide{
         background-position: 75% 25% !important;
     }
 }
 
-.landing_page > div.slide > b{
+.dots{
     position: absolute;
-    bottom: 15%;
-    left: 5%;
-    font-size: 6rem;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+.landing_page > div.slide > div{
+    position: absolute;
+    justify-content: space-around;
+    top: 30%;
     color: white;
+}
+
+.landing_page > div.slide > div b{
+    font-size: 6rem;
     line-height: 6.5rem;
 }
 
+.landing_page > div.slide > div button{
+    width: 100%;
+    font-size: 36px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 50px auto 0;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.landing_page > div.slide iframe{
+    width: 746px;
+    height: 430px;
+}
+
+@media (max-width: 1400px){
+    .landing_page > div.slide > div b{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .landing_page > div.slide > div button{
+        font-size: 28px;
+    }
+    .landing_page > div.slide iframe{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1400px){
+    .landing_page > div.slide > div{
+        top: 15%;
+        height: 75%;
+        flex-direction: column-reverse;
+    }
+}
+
 @media (max-width: 768px){
-    .landing_page > div.slide > b{
+    .landing_page > div.slide > div b{
         font-size: 3rem;
         line-height: 3rem;
     }
@@ -230,6 +279,18 @@ nav > .responsiveToggler > i{
         margin: auto;
         margin-top: 20px;
         width: 50%;
+    }
+    .landing_page > div.slide > div{
+        justify-content: center;
+        height: 85%;
+        top: 10%;
+    }
+    .landing_page > div.slide > div > iframe{
+        margin-bottom: 200px;
+    }
+    .landing_page > div.slide iframe{
+        width: 450px;
+        height: 300px;
     }
 }
 
