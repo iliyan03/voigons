@@ -4,6 +4,7 @@ body{
 
 nav{
     color: white;
+    background: rgb(0, 0, 0, 0.5);
     text-transform: uppercase;
     display: flex;
     width: 100%;
@@ -102,7 +103,7 @@ nav > .responsiveToggler > i{
         margin-left: auto !important;
     }
     nav > div > ul > li > a {
-        font-size: 15px;
+        font-size: 16px !important;
     }
 }
 
@@ -182,12 +183,6 @@ nav > .responsiveToggler > i{
     background-repeat: no-repeat;
 }
 
-.landing_page > .slide:nth-of-type(3){
-    background-image: url('https://iliyan03.github.io/voigons/images/landing_page_image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 @media (max-width: 768px){
     .landing_page > .slide{
@@ -218,10 +213,12 @@ nav > .responsiveToggler > i{
     background-color: white;
 }
 
+div.slide_content > div,
+div.slide_content > iframe{
+    width: 50%;
+}
+
 .landing_page > div.slide > div{
-    position: absolute;
-    justify-content: space-around;
-    top: 30%;
     color: white;
 }
 
@@ -230,14 +227,29 @@ nav > .responsiveToggler > i{
     line-height: 6.5rem;
 }
 
-.landing_page > div.slide > div button{
-    width: 100%;
+.landing_page > div.slide > div.slide_content > div > button{
+    width: 50%;
     font-size: 36px;
     background-color: white;
     border: 2px solid black;
     margin: 50px auto 0;
     padding: 5px 0;
     font-weight: bold;
+}
+
+.slide_content > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0 !important;
+}
+
+@media (max-width: 1100px){
+    .landing_page > div.slide > div.slide_content > div > button{
+        font-size: 30px;
+    }
 }
 
 .landing_page > div.slide iframe{
@@ -280,18 +292,21 @@ nav > .responsiveToggler > i{
         margin-top: 20px;
         width: 50%;
     }
-    .landing_page > div.slide > div{
-        justify-content: center;
-        height: 85%;
-        top: 10%;
-    }
-    .landing_page > div.slide > div > iframe{
-        margin-bottom: 200px;
-    }
     .landing_page > div.slide iframe{
         width: 450px;
         height: 300px;
     }
+    .landing_page > div.slide > div.slide_content > div > button{
+        width: 75%;
+    }
+    div.slide_content > div,
+    div.slide_content > iframe{
+        width: 100%;
+    }
+    .row{
+        justify-content: space-around !important;
+    }
+
 }
 
 .form_inputs > input.email, .form_inputs > input.name{
