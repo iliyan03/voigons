@@ -28,8 +28,8 @@ function currentSlide(n) {
 }
 
 function startTimer(){
-/*   timer = setInterval(plusSlides, 5000, 1)
- */}
+  timer = setInterval(plusSlides, 5000, 1)
+}
 
 function showSlides(n) {
   var i;
