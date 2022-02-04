@@ -214,7 +214,7 @@ nav > .responsiveToggler > i{
 }
 
 div.slide_content > div,
-div.slide_content > iframe{
+div.slide_content iframe{
     width: 50%;
 }
 
@@ -225,14 +225,23 @@ div.slide_content > iframe{
 .landing_page > div.slide > div b{
     font-size: 6rem;
     line-height: 6.5rem;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
-.landing_page > div.slide > div.slide_content > div > button{
+.landing_page > div.slide > div.slide_content > div a{
     width: 50%;
+    margin: 50px auto 0;
+}
+
+.landing_page > div.slide > div.slide_content > div  button{
+    width: 100%;
     font-size: 36px;
     background-color: white;
     border: 2px solid black;
-    margin: 50px auto 0;
     padding: 5px 0;
     font-weight: bold;
 }
@@ -247,14 +256,14 @@ div.slide_content > iframe{
 }
 
 @media (max-width: 1100px){
-    .landing_page > div.slide > div.slide_content > div > button{
+    .landing_page > div.slide > div.slide_content > div button{
         font-size: 30px;
     }
 }
 
 .landing_page > div.slide iframe{
     width: 746px;
-    height: 430px;
+    height: 410px;
 }
 
 @media (max-width: 1400px){
@@ -293,14 +302,14 @@ div.slide_content > iframe{
         width: 50%;
     }
     .landing_page > div.slide iframe{
-        width: 450px;
-        height: 300px;
+        width: 100%;
+        height: 190px;
     }
-    .landing_page > div.slide > div.slide_content > div > button{
+    .landing_page > div.slide > div.slide_content > div a{
         width: 75%;
     }
     div.slide_content > div,
-    div.slide_content > iframe{
+    div.slide_content iframe{
         width: 100%;
     }
     .row{
