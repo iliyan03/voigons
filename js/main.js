@@ -40,5 +40,5 @@ function showSlides(n) {
   if (timer){
     clearInterval(timer);
   }
-/*   startTimer(slideIndex)
- */}
+  startTimer(slideIndex)
+}
