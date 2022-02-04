@@ -170,7 +170,7 @@ nav > .responsiveToggler > i{
 }
 
 .landing_page > .slide:first-of-type{
-    background-image: url('https://iliyan03.github.io/voigons/images/landing_page_image.png');
+    background-image: url('https://iliyan03.github.io/voigons/images/blasting_courier_slide_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -185,7 +185,7 @@ nav > .responsiveToggler > i{
 
 
 @media (max-width: 768px){
-    .landing_page > .slide{
+    .landing_page > .slide:nth-of-type(2){
         background-position: 75% 25% !important;
     }
 }
