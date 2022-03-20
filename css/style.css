@@ -398,12 +398,12 @@ div.slide_content iframe{
     font-size: 2rem;
 }
 
-.project-content > button > a{
+.project-content button > a{
     color: white;
     text-decoration: none;
 }
 
-.project-content > button{
+.project-content button{
     width: 25%;
     font-size: 20px;
 }
@@ -416,7 +416,7 @@ div.slide_content iframe{
     .project > img{
         margin: auto;
     }
-    .project-content > button{
+    .project-content button{
         margin: auto;
         width: 75% !important;
         font-size: 18px;
@@ -436,7 +436,7 @@ div.slide_content iframe{
         font-size: 1.5rem;
     }
 
-    .project-content > button{
+    .project-content button{
         width: 50%;
     }
 }
