@@ -68,6 +68,8 @@ var player;
 var player_2;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('blasting_courier_player', {
+    height: '410px',
+    width: '729px',
     videoId: 'mWy210QVbNU',
     playerVars: {
       'playsinline': 1
@@ -77,6 +79,8 @@ function onYouTubeIframeAPIReady() {
     }
   });
   player_2 = new YT.Player('premortal', {
+    height: '410px',
+    width: '729px',
     videoId: 'hvqM2Ei1Tfo',
     playerVars: {
       'playsinline': 1
@@ -98,5 +102,6 @@ function onPlayerStateChange(event) {
     startTimer()
   }
 }
+
 
 /* Youtube API for slideshow iframes - ends here */
