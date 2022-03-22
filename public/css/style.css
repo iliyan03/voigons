@@ -170,7 +170,7 @@ nav > .responsiveToggler > i{
 }
 
 .landing_page > .slide:nth-of-type(1){
-    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/images/premortal_slider_bg.png');
+    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/public/images/premortal_slider_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@ nav > .responsiveToggler > i{
 }
 
 .landing_page > .slide:nth-of-type(2){
-    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/images/blasting_courier_slide_bg.png');
+    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/public/images/blasting_courier_slide_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
