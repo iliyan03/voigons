@@ -1,0 +1,501 @@
+body{
+    margin: 0;
+}
+
+nav{
+    color: white;
+    background: rgb(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    display: flex;
+    width: 100%;
+    z-index: 4000;
+}
+
+nav > div.logo{
+    display: none;
+    top: .5rem;
+    left: 1rem;
+}
+
+nav div.logo > a > img{
+    width: 40px;
+    height: 40px;
+}
+
+nav div.logo > span{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+nav div.logo > span > a,
+nav div.logo > span > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+nav > div > div.logo{
+    display: flex;
+    align-items: center;
+}
+
+nav > div:nth-of-type(2){
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+nav > div > ul {
+    display: flex;
+    margin: auto 0;
+    justify-content: center;
+}
+
+.responsiveToggler{
+    display: none;
+}
+
+.responsiveToggler > .nav-list > .nav-buttons{
+    display: none;
+    z-index: 10;
+}
+
+.responsiveToggler > .nav-list > .nav-buttons > li > a{
+    font-size: 16px;
+}
+
+.nav-buttons > li{
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+.nav-buttons > li > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav > .responsiveToggler > i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: right;
+}
+
+.responsiveToggler > div > .nav-buttons{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#responsiveButtons{
+    background-color: transparent;
+}
+
+@media (max-width: 1100px){
+    nav > div:nth-of-type(2) > div.logo{
+        display: none;
+    }
+    nav > div.logo{
+        display: flex;
+    }
+    nav > div > ul {
+        width: 75%;
+        margin: 0;
+        margin-left: auto !important;
+    }
+    nav > div > ul > li > a {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 768px){
+    nav > div.logo{
+        top: 1rem;
+    }
+    nav > div:nth-of-type(2){
+        display: none;
+    }
+    nav{
+        justify-content: end;
+    }
+    .responsiveToggler{
+        display: flex;
+    }
+    .nav-buttons.active{
+        display: flex !important;
+    }
+    .responsiveToggler > div > .nav-buttons{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .responsiveToggler > div > .nav-buttons > li{
+        margin: 7px;
+    }
+}
+
+.landing_page{
+    background: black;
+    position: relative;
+    height: 100vh;
+}
+
+.prev, .next {
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.landing_page > .slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.landing_page > .slide:nth-of-type(1){
+    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/images/premortal_slider_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+.landing_page > .slide:nth-of-type(2){
+    background: rgba(0, 0, 0, 0.5) url('https://iliyan03.github.io/voigons/images/blasting_courier_slide_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+@media (max-width: 768px){
+    .landing_page > .slide:nth-of-type(1){
+        background-position: 75% 25% !important;
+    }
+}
+
+.dots{
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+div.slide_content{
+    backdrop-filter: blur(5px);
+}
+
+div.slide_content > div,
+div.slide_content iframe{
+    width: 50%;
+}
+
+.landing_page > div.slide > div{
+    color: white;
+}
+
+.landing_page > div.slide > div b{
+    font-size: 6rem;
+    line-height: 6.5rem;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.landing_page > div.slide > div.slide_content > div a{
+    width: 50%;
+    margin: 50px auto 0;
+}
+
+.landing_page > div.slide > div.slide_content > div  button{
+    width: 100%;
+    font-size: 36px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.slide_content > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0 !important;
+}
+
+@media (max-width: 1100px){
+    .landing_page > div.slide > div.slide_content > div button{
+        font-size: 30px;
+    }
+}
+
+.landing_page > div.slide iframe{
+    width: 729px;
+    height: 410px;
+}
+
+@media (max-width: 1400px){
+    .landing_page > div.slide > div b{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .landing_page > div.slide > div button{
+        font-size: 28px;
+    }
+    .landing_page > div.slide iframe{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1400px){
+    .landing_page > div.slide > div{
+        top: 15%;
+        height: 75%;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 768px){
+    .landing_page > div.slide > div b{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .form_inputs{
+        flex-direction: column;
+    }
+    .form_inputs > input.button{
+        margin: auto;
+        margin-top: 20px;
+        width: 50%;
+    }
+    .landing_page > div.slide iframe{
+        width: 100%;
+        height: 190px;
+    }
+    .landing_page > div.slide > div.slide_content > div a{
+        width: 75%;
+    }
+    div.slide_content > div,
+    div.slide_content iframe{
+        width: 100%;
+    }
+    .row{
+        justify-content: space-around !important;
+    }
+
+}
+
+.form_inputs > input.email, .form_inputs > input.name{
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 500;
+    border-color: black;
+}
+
+
+@media (max-width: 768px){
+    .form_inputs > input.email, .form_inputs > input.name{
+        margin: 10px 0;
+    }
+}
+
+.form_inputs > input.button{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+    background: black;
+    border-color: black;
+}
+
+.patreon{
+    background: black;
+    color: white;
+}
+
+.patreon-button{
+    border-radius: 20px;
+    border-color: transparent;
+    color: white;
+    background: #ff424d;
+    font-weight: 500;
+}
+
+.steam-button{
+    border-radius: 20px;
+    border-color: transparent;
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+.youtube-button{
+    border-radius: 20px;
+    border-color: transparent;
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+.project > img{
+    border: 1px rgb(147, 147, 147) solid;
+}
+
+.project-content{
+    width: 100%;
+}
+
+/* .project-content  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ */
+
+.project-content .title > b{
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.project-content .description > p{
+    font-size: 2rem;
+}
+
+.project-content button > a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-content button{
+    width: 25%;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) { 
+    .project{
+        flex-direction: column;
+        text-align: center;
+    }
+    .project > img{
+        margin: auto;
+    }
+    .project-content button{
+        margin: auto;
+        width: 75% !important;
+        font-size: 18px;
+    }
+    .project-content{
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .project-content .title > b{
+        font-size: 1rem;
+    }
+
+    .project-content .description > p{
+        font-size: 1.5rem;
+    }
+
+    .project-content button{
+        width: 50%;
+    }
+}
+
+footer{
+    color: white;
+    background-color: black;
+}
+
+footer .logo span{
+    margin-left: 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+footer .socials > a{
+    margin: 0 15px;
+}
+
+footer .socials > a > img{
+    width: 45px;
+}
+
+@media (max-width: 576px) {
+    footer .socials > a > img{
+        width: 35px;
+    }
+}
+
+@media (max-width: 499px){
+    footer .socials {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer .socials > a{
+        margin: 15px;
+    }
+}
+
+footer .support{
+    margin: 0 40px;
+}
+
+footer .support > a{
+    color: white;
+}
+
+@media (max-width: 768px) { 
+    footer > div.container > div:first-of-type{
+        flex-direction: column;
+    }
+    footer .logo, footer .socials{
+        margin: 10px auto;
+    }
+    footer > div.container > div:nth-child(2){
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .support{
+        margin-top: 20px;
+    }
+}
