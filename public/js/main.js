@@ -1,7 +1,7 @@
 /* Change favicon based on OS theme */
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
   var link = document.querySelector("link[rel~='icon']");
-  link.href = "https://iliyan03.github.io/voigons/images/logo.png";
+  link.href = "https://iliyan03.github.io/voigons/public/images/logo.png";
 }
 
 /* Show navbar options on mobile devices */
